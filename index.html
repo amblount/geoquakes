@@ -40,4 +40,9 @@
         </div>
       </div>
   </body>
+  <script id="earthquake-data" type="text/x-handlebars-template">
+    {{#each earthquake}}
+    <p class="earthquake-name">{{ title }} / {{ time }} hours ago</p>
+    {{/each}}
+  </script>
 </html>
