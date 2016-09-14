@@ -41,11 +41,17 @@ $(document).on("ready", function() {
   })
 
   var map;
+  var latLong = { lat: 37.78, lng: -122.44};
   function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-      center: { lat: 37.78, lng: -122.44},
+      center: latLong,
       zoom: 8
     });
+
+    var marker = new google.maps.Marker({
+      position: latLong,
+      map: map,    
+    })
   }
 
   initMap();
